@@ -1,0 +1,7 @@
+.wrapper {
+    @apply relative flex flex-col min-h-screen;
+}
+
+.container {
+    @apply flex-grow pt-20;
+}

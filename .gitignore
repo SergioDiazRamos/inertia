@@ -17,3 +17,21 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+# diseinuak
+!.nvmrc
+!.vscode
+!.eslintrc
+!.eslintrc.json
+!.prettierrc
+!.prettierignore
+!.babelrc
+**/public/workbox-*.js
+**/public/sw.js
+**/public/worker-*.js
+.husky
+!.env.example
+
+# local env files
+.env*.local
+.env.development
