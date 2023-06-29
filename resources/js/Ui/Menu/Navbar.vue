@@ -2,9 +2,9 @@
     <div :class="$style.container">
         <Logo isLink />
 
-        <div :class="$style.inner">
+        <div v-if="!menu.isMenuOpen" :class="$style.inner">
             <NavLink
-                v-for="item in menu"
+                v-for="item in menuItems"
                 :key="item.id"
                 :active="$page.component === item.component"
                 :href="item.href"
@@ -23,11 +23,14 @@
 <script setup>
 import axios from 'axios';
 import { ref, onMounted } from 'vue';
+import { useMenuStore } from '@/store';
 
 import NavLink from '@/Ui/Menu/NavLink.vue';
 import Logo from '@/Ui/Logo/Logo.vue';
 
-const menu = ref([]);
+const menuItems = ref([]);
+
+const menu = useMenuStore();
 
 const props = defineProps({
     auth: Object,
@@ -36,7 +39,7 @@ const props = defineProps({
 const getMenu = () => {
     axios
         .get('/api/menu')
-        .then((res) => (menu.value = res.data))
+        .then((res) => (menuItems.value = res.data))
         .catch((error) => console.log(error));
 };
 
