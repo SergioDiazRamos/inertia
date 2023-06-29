@@ -1,8 +1,7 @@
 <template>
     <div :class="$style.container">
-        <Link href="/">
-            <Logo />
-        </Link>
+        <Logo isLink />
+
         <div :class="$style.inner">
             <NavLink
                 v-for="item in menu"
@@ -22,11 +21,11 @@
 </template>
 
 <script setup>
-import axios from "axios";
-import { ref, onMounted } from "vue";
+import axios from 'axios';
+import { ref, onMounted } from 'vue';
 
-import NavLink from "@/Ui/Menu/NavLink.vue";
-import Logo from "@/Ui/Logo/Logo.vue";
+import NavLink from '@/Ui/Menu/NavLink.vue';
+import Logo from '@/Ui/Logo/Logo.vue';
 
 const menu = ref([]);
 
@@ -36,7 +35,7 @@ const props = defineProps({
 
 const getMenu = () => {
     axios
-        .get("/api/menu")
+        .get('/api/menu')
         .then((res) => (menu.value = res.data))
         .catch((error) => console.log(error));
 };
@@ -45,5 +44,5 @@ onMounted(() => getMenu());
 </script>
 
 <style module>
-@import "./Navbar.css";
+@import './Navbar.css';
 </style>

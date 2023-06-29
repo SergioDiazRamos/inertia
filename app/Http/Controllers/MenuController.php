@@ -18,9 +18,15 @@ class MenuController extends Controller
             ],
             [
                 "id" => "e26f7700-513d-4e6c-ba5f-3cfe763eea4e",
-                "name" => "Work",
-                "component" => "Work",
-                "href" => '/work',
+                "name" => "About",
+                "component" => "About",
+                "href" => '/about',
+            ],
+            [
+                "id" => "0630665d-a0b7-4da0-82c0-220a6e864f45",
+                "name" => "Contact",
+                "component" => "Contact",
+                "href" => '/contact',
             ],
 
         ];

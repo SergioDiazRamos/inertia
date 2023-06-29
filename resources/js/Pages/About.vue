@@ -1,14 +1,14 @@
 <template>
     <Head>
-        <title>Home</title>
+        <title>About</title>
         <meta
             type="description"
-            content="Home information"
+            content="About information"
             head-key="description"
         />
     </Head>
 
     <div class="p-4">
-        <h1 class="font-bold text-7xl">Home Page</h1>
+        <h1 class="font-bold text-7xl">About Page</h1>
     </div>
 </template>
