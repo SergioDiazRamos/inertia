@@ -1,7 +1,7 @@
 .container {
-    @apply absolute top-0 left-0 right-0 flex items-center h-16 bg-transparent md:mb-4;
+  @apply absolute top-0 left-0 right-0 flex items-center h-16 bg-transparent md:mb-4;
 }
 
 .container > div {
-    @apply flex items-center justify-between w-full h-8;
+  @apply flex items-center justify-between w-full h-8;
 }

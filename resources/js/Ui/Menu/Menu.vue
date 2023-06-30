@@ -1,9 +1,9 @@
 <template>
-    <Drawer />
-    <nav :class="$style.container" aria-label="Main navigation">
-        <Navbar :auth="auth" />
-        <MenuButton />
-    </nav>
+  <Drawer />
+  <nav :class='$style.container' aria-label='Main navigation'>
+    <Navbar :auth='auth' />
+    <MenuButton />
+  </nav>
 </template>
 
 <script setup>
@@ -15,7 +15,7 @@ import Drawer from '@/Ui/Menu/Drawer.vue';
 const menu = useMenuStore();
 
 defineProps({
-    auth: Object,
+  auth: Object,
 });
 </script>
 

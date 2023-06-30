@@ -1,12 +1,12 @@
 <template>
-    <Link :class="[active ? $style.active : '', $style.link]">
-        <slot />
-    </Link>
+  <Link :class="[active ? $style.active : '', $style.link]">
+    <slot />
+  </Link>
 </template>
 
 <script setup>
 defineProps({
-    active: Boolean,
+  active: Boolean,
 });
 </script>
 

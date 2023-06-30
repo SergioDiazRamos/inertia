@@ -1,7 +1,7 @@
 .link {
-    @apply mx-1 text-xs font-light transition-all duration-500 text-zinc-900 hover:text-red-500;
+  @apply mx-1 text-xs font-light transition-all duration-500 text-zinc-900 hover:text-red-500;
 }
 
 .active {
-    @apply underline;
+  @apply underline;
 }

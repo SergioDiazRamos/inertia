@@ -1,0 +1,19 @@
+<template>
+  <div :class="$style.container">
+    <transition appear @before-enter="beforeFadeY" @enter="enterFadeY">
+      <h1 :class="$style.title">{{ title }}</h1>
+    </transition>
+  </div>
+</template>
+
+<script setup>
+import { beforeFadeY, enterFadeY } from '@/lib';
+
+defineProps({
+  title: { type: String },
+});
+</script>
+
+<style module>
+@import './Header.css';
+</style>

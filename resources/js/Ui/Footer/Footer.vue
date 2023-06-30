@@ -1,13 +1,13 @@
 <template>
-    <footer :class="$style.container">
-        <div :class="$style.inner">
-            <Logo />
-        </div>
+  <footer :class='$style.container'>
+    <div :class='$style.inner'>
+      <Logo />
+    </div>
 
-        <div :class="$style.copyright">
-            ©{{ new Date().getFullYear() }} Todos los derechos reservados
-        </div>
-    </footer>
+    <div :class='$style.copyright'>
+      ©{{ new Date().getFullYear() }} Todos los derechos reservados
+    </div>
+  </footer>
 </template>
 
 <script setup>

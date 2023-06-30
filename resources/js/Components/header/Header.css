@@ -1,0 +1,7 @@
+.container {
+  @apply p-4;
+}
+
+.title {
+  @apply font-bold text-7xl;
+}

@@ -25,6 +25,6 @@
     "editor.glyphMargin": true,
     "workbench.activityBar.visible": true,
     "workbench.statusBar.visible": false,
-    "prettier.tabWidth": 4,
+    "prettier.tabWidth": 2,
     "prettier.singleAttributePerLine": true
 }
