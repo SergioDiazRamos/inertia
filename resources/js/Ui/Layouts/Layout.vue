@@ -5,11 +5,13 @@
         <div :class="$style.container">
             <slot />
         </div>
+        <Footer />
     </div>
 </template>
 
 <script setup>
-import Menu from "@/Ui/Menu/Menu.vue";
+import Menu from '@/Ui/Menu/Menu.vue';
+import Footer from '@/Ui/Footer/Footer.vue';
 
 defineProps({
     auth: Object,
@@ -17,5 +19,5 @@ defineProps({
 </script>
 
 <style module>
-@import "./Layout.css";
+@import './Layout.css';
 </style>
