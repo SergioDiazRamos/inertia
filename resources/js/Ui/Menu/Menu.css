@@ -1,6 +1,5 @@
 .container {
-    @apply absolute top-0 left-0 right-0 z-30 flex items-center h-16 bg-transparent md:mb-4;
-    backdrop-filter: blur(10px);
+    @apply absolute top-0 left-0 right-0 flex items-center h-16 bg-transparent md:mb-4;
 }
 
 .container > div {

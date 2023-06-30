@@ -1,15 +1,16 @@
 <template>
+    <Drawer />
     <nav :class="$style.container" aria-label="Main navigation">
         <Navbar :auth="auth" />
-        <!-- <button @click="menu.toggle()" class="pr-4">Menu</button> -->
         <MenuButton />
     </nav>
 </template>
 
 <script setup>
-import { useMenuStore } from '@/store';
+import { useMenuStore } from '@/Store';
 import Navbar from '@/Ui/Menu/Navbar.vue';
-import MenuButton from './MenuButton.vue';
+import MenuButton from '@/Ui/Menu/MenuButton.vue';
+import Drawer from '@/Ui/Menu/Drawer.vue';
 
 const menu = useMenuStore();
 

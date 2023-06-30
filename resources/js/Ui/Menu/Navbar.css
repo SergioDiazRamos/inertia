@@ -5,3 +5,7 @@
 .inner {
     @apply flex;
 }
+
+.logo {
+    @apply z-30;
+}

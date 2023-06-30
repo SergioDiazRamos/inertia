@@ -1,6 +1,6 @@
 <template>
     <div :class="$style.container">
-        <Logo isLink />
+        <Logo isLink :class="$style.logo" />
 
         <div v-if="!menu.isMenuOpen" :class="$style.inner">
             <NavLink
@@ -23,7 +23,7 @@
 <script setup>
 import axios from 'axios';
 import { ref, onMounted } from 'vue';
-import { useMenuStore } from '@/store';
+import { useMenuStore } from '@/Store';
 
 import NavLink from '@/Ui/Menu/NavLink.vue';
 import Logo from '@/Ui/Logo/Logo.vue';
