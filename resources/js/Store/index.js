@@ -1,1 +1,1 @@
-export * from './MenuStore';
+export * from './menuStore';

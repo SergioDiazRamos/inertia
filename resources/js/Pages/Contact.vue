@@ -12,5 +12,5 @@
 </template>
 
 <script setup>
-import { Header } from '@/Components/header';
+import { Header } from '@';
 </script>

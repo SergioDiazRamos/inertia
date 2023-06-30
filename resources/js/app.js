@@ -7,7 +7,7 @@ import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createPinia } from 'pinia';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 
-import Layout from '@/Ui/Layouts/Layout.vue';
+import { Layout } from '@';
 
 createInertiaApp({
   title: (title) => `${title} :: Inertia`,
