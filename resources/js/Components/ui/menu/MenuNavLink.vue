@@ -11,5 +11,5 @@ defineProps({
 </script>
 
 <style module>
-@import "./NavLink.css";
+@import './MenuNavLink.css';
 </style>

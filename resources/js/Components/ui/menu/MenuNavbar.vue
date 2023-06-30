@@ -6,17 +6,17 @@
     />
 
     <div v-if="!menu.isMenuOpen" :class="$style.inner">
-      <NavLink
+      <Link
         v-for="item in menuItems"
         :key="item.id"
         :active="$page.component === item.component"
         :href="item.href"
       >
         {{ item.name }}
-      </NavLink>
+      </Link>
 
-      <NavLink v-if="!auth.user" :href="route('login')">Log in</NavLink>
-      <NavLink v-if="!auth.user" :href="route('register')">Register </NavLink>
+      <Link v-if="!auth.user" :href="route('login')">Log in</Link>
+      <Link v-if="!auth.user" :href="route('register')">Register </Link>
     </div>
   </div>
 </template>
@@ -25,7 +25,7 @@
 import axios from 'axios';
 import { onMounted, ref } from 'vue';
 
-import { NavLink, Logo, useMenuStore } from '@';
+import { MenuNavLink as Link, Logo, useMenuStore } from '@';
 
 const menuItems = ref([]);
 
@@ -46,5 +46,5 @@ onMounted(() => getMenu());
 </script>
 
 <style module>
-@import './Navbar.css';
+@import './MenuNavbar.css';
 </style>

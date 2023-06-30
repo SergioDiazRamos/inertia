@@ -55,5 +55,5 @@ function onLeave(el, done) {
 </script>
 
 <style module>
-@import './Drawer.css';
+@import './MenuDrawer.css';
 </style>

@@ -1,13 +1,13 @@
 <template>
-  <Drawer />
+  <MenuDrawer />
   <nav :class="$style.container" aria-label="Main navigation">
-    <Navbar :auth="auth" />
+    <MenuNavbar :auth="auth" />
     <MenuButton />
   </nav>
 </template>
 
 <script setup>
-import { Navbar, MenuButton, Drawer } from '@';
+import { MenuNavbar, MenuButton, MenuDrawer } from '@';
 
 defineProps({
   auth: Object,
