@@ -1,8 +1,8 @@
 <template>
-  <div :class='$style.wrapper'>
-    <Menu :auth='auth' />
+  <div :class="$style.wrapper">
+    <Menu :auth="auth" />
 
-    <div :class='$style.container'>
+    <div :class="$style.container">
       <slot />
     </div>
     <Footer />
@@ -10,8 +10,7 @@
 </template>
 
 <script setup>
-import Menu from '@/Ui/Menu/Menu.vue';
-import Footer from '@/Ui/Footer/Footer.vue';
+import { Menu, Footer } from '@';
 
 defineProps({
   auth: Object,

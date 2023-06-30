@@ -1,17 +1,17 @@
 <template>
-  <footer :class='$style.container'>
-    <div :class='$style.inner'>
+  <footer :class="$style.container">
+    <div :class="$style.inner">
       <Logo />
     </div>
 
-    <div :class='$style.copyright'>
+    <div :class="$style.copyright">
       ©{{ new Date().getFullYear() }} Todos los derechos reservados
     </div>
   </footer>
 </template>
 
 <script setup>
-import Logo from '@/Ui/Logo/Logo.vue';
+import { Logo } from '@';
 </script>
 
 <style module>

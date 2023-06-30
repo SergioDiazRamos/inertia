@@ -1,16 +1,17 @@
 <template>
-  <Transition @before-enter='onBeforeEnter' @enter='onEnter' @leave='onLeave'>
-    <div :class='$style.container' v-if='menu.isMenuOpen'></div>
+  <Transition @before-enter="onBeforeEnter" @enter="onEnter" @leave="onLeave">
+    <div :class="$style.container" v-if="menu.isMenuOpen"></div>
   </Transition>
 </template>
 
 <script setup>
 import gsap from 'gsap';
 
-import { useMenuStore } from '@/Store';
+import { useMenuStore } from '@';
 
 const menu = useMenuStore();
 
+// TODO: Refactory
 function onBeforeEnter(el) {
   gsap.set(el, {
     top: '-50vh',

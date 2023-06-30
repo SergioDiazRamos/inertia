@@ -1,18 +1,13 @@
 <template>
   <Drawer />
-  <nav :class='$style.container' aria-label='Main navigation'>
-    <Navbar :auth='auth' />
+  <nav :class="$style.container" aria-label="Main navigation">
+    <Navbar :auth="auth" />
     <MenuButton />
   </nav>
 </template>
 
 <script setup>
-import { useMenuStore } from '@/Store';
-import Navbar from '@/Ui/Menu/Navbar.vue';
-import MenuButton from '@/Ui/Menu/MenuButton.vue';
-import Drawer from '@/Ui/Menu/Drawer.vue';
-
-const menu = useMenuStore();
+import { Navbar, MenuButton, Drawer } from '@';
 
 defineProps({
   auth: Object,

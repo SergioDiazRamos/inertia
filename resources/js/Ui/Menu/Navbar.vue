@@ -1,25 +1,22 @@
 <template>
-  <div :class='$style.container'>
+  <div :class="$style.container">
     <Logo
       isLink
       :class="[$style.logo, menu.isMenuOpen ? $style.logoIsMenuOpen : '']"
     />
 
-    <div v-if='!menu.isMenuOpen' :class='$style.inner'>
+    <div v-if="!menu.isMenuOpen" :class="$style.inner">
       <NavLink
-        v-for='item in menuItems'
-        :key='item.id'
-        :active='$page.component === item.component'
-        :href='item.href'
+        v-for="item in menuItems"
+        :key="item.id"
+        :active="$page.component === item.component"
+        :href="item.href"
       >
         {{ item.name }}
       </NavLink>
 
-      <NavLink v-if='!auth.user' :href="route('login')">Log in</NavLink>
-      <NavLink v-if='!auth.user' :href="route('register')"
-      >Register
-      </NavLink
-      >
+      <NavLink v-if="!auth.user" :href="route('login')">Log in</NavLink>
+      <NavLink v-if="!auth.user" :href="route('register')">Register </NavLink>
     </div>
   </div>
 </template>
@@ -27,10 +24,8 @@
 <script setup>
 import axios from 'axios';
 import { onMounted, ref } from 'vue';
-import { useMenuStore } from '@/Store';
 
-import NavLink from '@/Ui/Menu/NavLink.vue';
-import Logo from '@/Ui/Logo/Logo.vue';
+import { NavLink, Logo, useMenuStore } from '@';
 
 const menuItems = ref([]);
 
