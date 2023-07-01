@@ -63,4 +63,13 @@ class SiteController extends Controller
     {
         //
     }
+
+
+    /**
+     * Display the first record.
+     */
+    public function data()
+    {
+        return response()->json(Site::first());
+    }
 }
