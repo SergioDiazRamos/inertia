@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Admin\Menu;
 use App\Models\Admin\Menuitem;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class MenuitemSeeder extends Seeder
@@ -13,25 +13,25 @@ class MenuitemSeeder extends Seeder
      */
     public function run(): void
     {
-        // Menuitem::factory()->create(
-        //     [
-        //         'name' => 'Home',
-        //         'slug' => '/'
-        //     ],
-        // );
+        $main = Menu::where('name', '=', 'main')->firstOrFail();
 
-        // Menuitem::factory()->create(
-        //     [
-        //         'name' => 'About',
-        //         'slug' => '/about'
-        //     ],
+        $home = Menuitem::create([
+            'name' => 'Home',
+            'slug' => '/'
+        ]);
+        $main->menuitems()->attach($home->id, ['order' => 0]);
 
-        // );
-        // Menuitem::factory()->create(
-        //     [
-        //         'name' => 'Contact',
-        //         'slug' => '/contact'
-        //     ],
-        // );
+
+        $about = Menuitem::create([
+            'name' => 'About',
+            'slug' => '/about'
+        ]);
+        $main->menuitems()->attach($about->id, ['order' => 1]);
+
+        $contact = Menuitem::create([
+            'name' => 'Contact',
+            'slug' => '/contact'
+        ],);
+        $main->menuitems()->attach($contact->id, ['order' => 2]);
     }
 }

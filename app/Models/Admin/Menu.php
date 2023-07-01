@@ -24,6 +24,7 @@ class Menu extends Model
 
     public function menuitems(): BelongsToMany
     {
-        return $this->belongsToMany(Menuitem::class);
+
+        return $this->belongsToMany(Menuitem::class)->withPivot('order');
     }
 }

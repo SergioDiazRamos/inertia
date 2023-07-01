@@ -2,18 +2,19 @@
 
 namespace Database\Seeders;
 
-use App\Models\Admin\Menu;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
-class MenuSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Menu::create([
-            'name' => 'Main',
+        User::factory()->create([
+            'name' => 'Diseinuak',
+            'email' => 'sergio@diseinuak.com',
         ]);
     }
 }

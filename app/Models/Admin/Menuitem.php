@@ -32,6 +32,6 @@ class Menuitem extends Model
 
     public function menus(): BelongsToMany
     {
-        return $this->belongsToMany(Menu::class);
+        return $this->belongsToMany(Menu::class)->withPivot('order');
     }
 }
