@@ -1,18 +1,31 @@
 <template>
-  <Link v-if='isLink' :href="href ? href : '/'" :class='$style.logo'>{{
-      site.siteTitle
-    }}
+  <Link v-if="isLink" :href="href ? href : '/'" :class="$style.logo"
+    >{{ siteData.title }}
   </Link>
-  <div v-else :class='$style.logo'>{{ site.siteTitle }}</div>
+  <div v-else :class="$style.logo">{{ siteData.title }}</div>
 </template>
 
 <script setup>
-import { site } from '@data/site.js';
+import { api } from '@';
+import { onMounted, ref } from 'vue';
+
+const siteData = ref([]);
 
 defineProps({
   isLink: Boolean,
   href: String,
 });
+
+const getSiteData = async () => {
+  try {
+    const { data } = await api.get('/site');
+    siteData.value = data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+onMounted(() => getSiteData());
 </script>
 
 <style module>

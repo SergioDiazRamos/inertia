@@ -35,8 +35,8 @@ const props = defineProps({
   auth: Object,
 });
 
-const getMenu = () => {
-  axios
+const getMenu = async () => {
+  await axios
     .get('/api/menu')
     .then((res) => (menuItems.value = res.data))
     .catch((error) => console.log(error));

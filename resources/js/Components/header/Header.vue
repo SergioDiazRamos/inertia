@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import { beforeFadeY, enterFadeY } from '@/lib';
+import { beforeFadeY, enterFadeY } from '@';
 
 defineProps({
   title: { type: String },

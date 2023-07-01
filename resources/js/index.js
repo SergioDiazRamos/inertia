@@ -1,2 +1,3 @@
-export * from './store';
 export * from './Components';
+export * from './lib';
+export * from './store';
