@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\MenuController;
+use App\Http\Controllers\MenuOldController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/menu', MenuController::class);
+Route::get('/menu', MenuOldController::class);
