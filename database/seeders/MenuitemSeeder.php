@@ -13,24 +13,26 @@ class MenuitemSeeder extends Seeder
      */
     public function run(): void
     {
-        $main = Menu::where('name', '=', 'main')->firstOrFail();
+        $main = Menu::whereName('Main')->first();
 
         $home = Menuitem::create([
             'name' => 'Home',
-            'slug' => '/'
+            'slug' => '/',
+            'component' => 'Home'
         ]);
         $main->menuitems()->attach($home->id, ['order' => 0]);
 
-
         $about = Menuitem::create([
             'name' => 'About',
-            'slug' => '/about'
+            'slug' => '/about',
+            'component' => 'About'
         ]);
         $main->menuitems()->attach($about->id, ['order' => 1]);
 
         $contact = Menuitem::create([
             'name' => 'Contact',
-            'slug' => '/contact'
+            'slug' => '/contact',
+            'component' => 'Contact'
         ],);
         $main->menuitems()->attach($contact->id, ['order' => 2]);
     }

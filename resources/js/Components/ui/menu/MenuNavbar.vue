@@ -7,10 +7,10 @@
 
     <div v-if="!menu.isMenuOpen" :class="$style.inner">
       <Link
-        v-for="item in menuItems"
+        v-for="item in mainMenu"
         :key="item.id"
         :active="$page.component === item.component"
-        :href="item.href"
+        :href="item.slug"
       >
         {{ item.name }}
       </Link>
@@ -22,12 +22,11 @@
 </template>
 
 <script setup>
-import axios from 'axios';
 import { onMounted, ref } from 'vue';
 
-import { MenuNavLink as Link, Logo, useMenuStore } from '@';
+import { MenuNavLink as Link, Logo, useMenuStore, api } from '@';
 
-const menuItems = ref([]);
+const mainMenu = ref([]);
 
 const menu = useMenuStore();
 
@@ -35,14 +34,17 @@ const props = defineProps({
   auth: Object,
 });
 
-const getMenu = async () => {
-  await axios
-    .get('/api/menu')
-    .then((res) => (menuItems.value = res.data))
-    .catch((error) => console.log(error));
+// TODO: Move to lib
+const getMainMenu = async () => {
+  try {
+    const { data } = await api.get('/main-menu');
+    mainMenu.value = data;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
-onMounted(() => getMenu());
+onMounted(() => getMainMenu());
 </script>
 
 <style module>

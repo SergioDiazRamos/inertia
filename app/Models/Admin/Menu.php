@@ -25,6 +25,16 @@ class Menu extends Model
     public function menuitems(): BelongsToMany
     {
 
-        return $this->belongsToMany(Menuitem::class)->withPivot('order');
+        return $this->belongsToMany(Menuitem::class)
+            ->withPivot('order')
+            ->orderBy('menu_menuitem.order');
     }
+
+    public function mainMenu(): BelongsToMany
+    {
+        return $this->belongsToMany(Menuitem::class)
+            ->withPivot('order')
+            ->orderBy('menu_menuitem.order');
+    }
+
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin\Menu;
+use App\Models\Admin\Menuitem;
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
@@ -62,5 +63,15 @@ class MenuController extends Controller
     public function destroy(Menu $menu)
     {
         //
+    }
+
+    /**
+     * Display the MainMenu
+     */
+    public function mainMenu()
+    {
+        $main = Menu::whereName('Main')->first();
+
+        return response()->json($main->mainMenu);
     }
 }

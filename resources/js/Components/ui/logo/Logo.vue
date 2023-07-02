@@ -16,6 +16,7 @@ defineProps({
   href: String,
 });
 
+// TODO: Move to lib
 const getSiteData = async () => {
   try {
     const { data } = await api.get('/site');

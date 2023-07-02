@@ -64,7 +64,6 @@ class SiteController extends Controller
         //
     }
 
-
     /**
      * Display the first record.
      */
