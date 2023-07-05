@@ -1,7 +1,14 @@
 .link {
-  @apply mx-1 text-xs font-light transition-all duration-500 text-zinc-900 hover:text-red-500;
+  @apply relative mx-1 text-sm font-light text-white transition-all duration-500;
 }
 
-.active {
-  @apply underline;
+.inactive::after {
+  @apply absolute left-0 h-[22px] w-0 border-b border-brand transition-all duration-300 content-[''];
+}
+
+.inactive:hover::after {
+  @apply w-full;
+}
+.active::after {
+  @apply absolute left-0 h-[22px] w-full border-b border-brand transition-all duration-300 content-[''];
 }

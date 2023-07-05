@@ -7,7 +7,7 @@
 }
 
 .logo {
-  @apply z-30;
+  @apply z-30 font-bold;
 }
 
 .logoIsMenuOpen {

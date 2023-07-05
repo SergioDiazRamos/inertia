@@ -3,5 +3,9 @@
 }
 
 .title {
-  @apply font-bold text-7xl;
+  @apply font-bold text-white text-7xl;
+}
+
+.title span {
+  @apply inline-block text-transparent bg-gradient-to-r from-brand to-green-300 bg-clip-text;
 }

@@ -8,7 +8,7 @@
     />
   </Head>
 
-  <Header title="Home Page" />
+  <Header title="Master your<br/> <span>server side</span>" />
 </template>
 
 <script setup>

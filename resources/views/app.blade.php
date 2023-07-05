@@ -4,15 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport"
-        content="width=device-width, initial-scale=1">
+    content="width=device-width, initial-scale=1">
 
   <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
   <!-- Fonts -->
   <link rel="preconnect"
-        href="https://fonts.bunny.net">
-  <link href="https://fonts.bunny.net/css?family=roboto:100,300,400,500,700,900&display=swap"
-        rel="stylesheet" />
+    href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=nunito:200,300,400,500,600,700,800&display=swap"
+    rel="stylesheet" />
 
   <!-- Scripts -->
   @routes
@@ -21,7 +21,8 @@
 </head>
 
 <body class="font-sans antialiased">
-@inertia
+  <div class="absolute inset-0 bg-gradient-to-br from-gray-950 to-gray-800"></div>
+  @inertia
 </body>
 
 </html>

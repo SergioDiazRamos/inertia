@@ -1,7 +1,7 @@
 .logo {
-  @apply text-lg font-semibold uppercase;
+  @apply text-lg font-semibold text-white uppercase;
 }
 
 a.logo {
-  @apply transition-all duration-500 hover:text-red-500;
+  @apply transition-all duration-500 hover:text-brand;
 }

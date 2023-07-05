@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.container">
     <transition appear @before-enter="beforeFadeY" @enter="enterFadeY">
-      <h1 :class="$style.title">{{ title }}</h1>
+      <h1 :class="$style.title" v-html="title" />
     </transition>
   </div>
 </template>

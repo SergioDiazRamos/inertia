@@ -1,5 +1,5 @@
 <template>
-  <Link :class="[active ? $style.active : '', $style.link]">
+  <Link :class="[$style.link, active ? $style.active : $style.inactive]">
     <slot />
   </Link>
 </template>

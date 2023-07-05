@@ -1,23 +1,28 @@
-import defaultTheme from "tailwindcss/defaultTheme";
-import forms from "@tailwindcss/forms";
-import typography from "@tailwindcss/typography";
+import defaultTheme from 'tailwindcss/defaultTheme';
+const colors = require('tailwindcss/colors');
+import forms from '@tailwindcss/forms';
+import typography from '@tailwindcss/typography';
 
 /** @type {import('tailwindcss').Config} */
 export default {
-    content: [
-        "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
-        "./storage/framework/views/*.php",
-        "./resources/views/**/*.blade.php",
-        "./resources/js/**/*.vue",
-    ],
+  content: [
+    './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+    './storage/framework/views/*.php',
+    './resources/views/**/*.blade.php',
+    './resources/js/**/*.vue',
+  ],
 
-    theme: {
-        extend: {
-            fontFamily: {
-                sans: ["Figtree", ...defaultTheme.fontFamily.sans],
-            },
-        },
+  theme: {
+    extend: {
+      colors: {
+        brand: '#00e1ff',
+      },
+
+      fontFamily: {
+        sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+      },
     },
+  },
 
-    plugins: [forms, typography],
+  plugins: [forms, typography],
 };
